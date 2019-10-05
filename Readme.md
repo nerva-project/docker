@@ -50,3 +50,9 @@ There are several suitable screens on:
 Type "screen [-d] -r [pid.]tty.host" to resume one of them.
 ```
 To access a screen, you simply run the command `screen -r nervad` or `screen -r nerva-wallet-rpc`
+
+## Web UI
+
+The docker container also hosts it's own web based UI for node monitoring and wallet functions, with mining controls in development. UI's can be located on port 17500 of localhost.  
+You can access the built in explorer at `http://localhost:17500/explorer` and the wallet at `http://localhost:17500/wallet`  
+
