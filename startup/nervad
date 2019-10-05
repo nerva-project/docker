@@ -12,5 +12,5 @@ echo Starting ${prog}
 
 cd /binaries
 
-screen -Sdm nervad ./${prog} --p2p-bind-ip 0.0.0.0 --p2p-bind-port 17565 --rpc-bind-ip 0.0.0.0 --rpc-bind-port 17566 \
---confirm-external-bind --quicksync /nerva/quicksync.raw --data-dir /nerva/blockchain --log-file /nerva/nervad.log ${@}
+./${prog} --p2p-bind-ip 0.0.0.0 --p2p-bind-port 17565 --rpc-bind-ip 0.0.0.0 --rpc-bind-port 17566 \
+--confirm-external-bind --quicksync /nerva/quicksync.raw --data-dir /nerva/blockchain --log-file /nerva/nervad.log --detach "${@}"
