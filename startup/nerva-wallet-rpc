@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo Starting nerva-wallet-rpc
+
+cd /binaries
+
+screen -Sdm nerva-wallet-rpc ./nerva-wallet-rpc --wallet-dir /nerva/wallets --rpc-bind-ip 0.0.0.0 --rpc-bind-port 3001 --rpc-login nerva:nerva --daemon-ssl disabled \
+--rpc-access-control-origins http://localhost,http://localhost:3001,http://localhost:17500 --rpc-auth-basic --confirm-cleartext-auth --trusted-daemon --confirm-external-bind \
+--log-level 3 --log-file /nerva/nerva-wallet-rpc.log "${@}"
