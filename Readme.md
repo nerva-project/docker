@@ -40,16 +40,11 @@ From here you have full headless access to the docker container.
 
 ### Monitoring via the CLI
 
-The docker container will start nervad and nerva-wallet-rpc in screen sessions. Screen enables you to run programs in virtual terminals, effectively running them in the background  
-to be called up later. To see the attached screens for these programs, run the command `screen -r`. You will see output similar to  
-```
-nerva@e16e53e576b0:/$ screen -r
-There are several suitable screens on:
-        49.nerva-wallet-rpc     (10/05/19 06:51:12)     (Detached)
-        45.nervad       (10/05/19 06:51:11)     (Detached)
-Type "screen [-d] -r [pid.]tty.host" to resume one of them.
-```
-To access a screen, you simply run the command `screen -r nervad` or `screen -r nerva-wallet-rpc`
+nervad and nerva-wallet-rpc are both run with the `--detach` option. This means their output is not going to be visible in the CLI. There are a few options for checking on the status of your nodes. First is the API. Each docker container also has a self contained API which points to your running node and wallet. The API can be found at `http://localhost:17500/api/`.  
+
+This also allows for simplified automation and monitoring via host side scripting.  
+
+Nervad will also accept the same commands as a running node. You can run `nervad status` for example directly into the docker prompt to check on the status of a node. For a full list of available commands, run `nervad help` in the docker prompt.
 
 ## Web UI
 
