@@ -5,6 +5,11 @@ mining, wallet, explorer and api functions. The only dependency to run this is d
 
 ## Install
 
+First you need docker. [Windows](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe) | 
+[OSX](https://download.docker.com/mac/stable/Docker.dmg)  
+
+Linux depends on your distro, but for debian/ubuntu and friends it is `apt install docker.io`
+
 There are 2 included scripts to get started with a minimum of effort. You can choose to either create the image from this repo, or pull it from docker hub.  
 
 ### Build locally
