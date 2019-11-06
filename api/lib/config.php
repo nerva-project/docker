@@ -5,6 +5,7 @@ define('WALLET_PORT', 3001);
 define('DEBUG', true);
 
 header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 
 if (DEBUG)
 {

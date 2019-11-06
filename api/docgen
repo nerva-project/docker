@@ -42,4 +42,3 @@ function section()
 echo "<pre><h3>NERVA Public API</h3></pre>" > ${dir}/index.html
 section Daemon
 section Wallet
-section External
