@@ -14,8 +14,8 @@ There are 2 included scripts to get started with a minimum of effort. You can ch
 
 ### Build locally
 
-Clone this repo and run the script `deploy-local` for your OS
-`git clone https://bitbucket.org/nerva-project/web-ui`
+Clone this repo and run the script `deploy-local` for your OS  
+`git clone https://bitbucket.org/nerva-project/web-ui`  
 `./deploy-local.sh`
 
 ### Pull from docker hub
@@ -34,9 +34,9 @@ loss of data.
 ### Quick Sync
 
 Since the blockchain data is held on the host system, you can migrate data from native applications to docker with ease. Simply copy existing blockchain files to  
-`$HOME/.nerva-docker/blockchain` and existing wallet files to `$HOME/.nerva-docker/wallets` and they will be seen within the container on startup.  
+`<HOME>/.nerva-docker/blockchain` and existing wallet files to `<HOME>/.nerva-docker/wallets` and they will be seen within the container on startup.  
 
-Additionally, you can use a quick sync file by simply downloading it from the website to `$HOME/.nerva-docker`. it will be found and used automatically.
+Additionally, you can use a quick sync file by simply downloading it from the website to `<HOME>/.nerva-docker`. it will be found and used automatically.
 
 ## The docker prompt
 
