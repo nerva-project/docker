@@ -1,9 +1,0 @@
-[submodule "external/miner"]
-	path = external/miner
-	url = https://bitbucket.org/nerva-project/dig
-[submodule "external/explorer"]
-	path = external/explorer
-	url = https://bitbucket.org/nerva-project/explorer
-[submodule "external/wallet"]
-	path = external/wallet
-	url = https://bitbucket.org/nerva-project/web-wallet
