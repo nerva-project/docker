@@ -1,7 +1,4 @@
 #!/bin/bash
 
 echo Starting nerva-wallet-cli
-
-cd /binaries
-
-./nerva-wallet-cli --log-file /nerva/nerva-wallet-cli.log "${@}"
+nerva-wallet-cli --log-file /nerva/nerva-wallet-cli.log "${@}"
