@@ -29,7 +29,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt update && apt upgrade --yes && 
     a2enmod rewrite && /var/www/html/api/docgen && \
     apt purge -y git ca-certificates build-essential libzmq3-dev libunbound-dev libboost-all-dev \
     libssl-dev libsodium-dev libcurl4-openssl-dev libminiupnpc-dev libunwind8-dev liblzma-dev \
-    libreadline6-dev libldns-dev libexpat1-dev cmake nodejs && apt clean
+    libreadline6-dev libldns-dev libexpat1-dev cmake nodejs && apt autoremove && apt clean
 
 COPY /apache/sa.000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY /apache/se.000-default.conf /etc/apache2/sites-enabled/000-default.conf
