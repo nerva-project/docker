@@ -7,8 +7,11 @@ mkdir -p ${HOME}/.nerva-docker
 mkdir -p ${HOME}/.nerva-docker/wallets
 mkdir -p ${HOME}/.nerva-docker/blockchain
 
-# Create the image
-docker build -t ${IMG_NAME}:latest -f ./Dockerfile .
+if [ ! "$(docker images --format '{{.Repository}}:{{.Tag}}' | grep ${IMG_NAME})" ]; then
+	docker build -t ${IMG_NAME}:latest -f ./Dockerfile .
+else
+	echo "Image already exists, skipping"
+fi
 
 if [ ! -f "${HOME}/.nerva-docker/quicksync.raw" ]; then
     echo Downloading quicksync file
@@ -16,5 +19,5 @@ if [ ! -f "${HOME}/.nerva-docker/quicksync.raw" ]; then
 fi
 
 # Run it
-docker run --rm -v ${HOME}/.nerva-docker:/nerva -i --privileged --user 1000:1000 --name "nerva" \
+docker run --rm -v ${HOME}/.nerva-docker:/nerva -i --ulimit memlock=65536:65536 --privileged --user 1000:1000 --name "nerva" \
 --publish 17500:80 --publish 17565:17565 --publish 17566:17566 --publish 19566:19566 -t ${IMG_NAME}:latest /bin/bash
