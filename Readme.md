@@ -12,12 +12,9 @@ Linux depends on your distro, but for debian/ubuntu and friends it is `apt insta
 
 There are 2 included scripts to get started with a minimum of effort. You can choose to either create the image from this repo, or pull it from docker hub.  
 
-### Pull from docker hub
+### Getting started
 
-Simply download and run the `deploy` script in this repo
-
-Functionally, the two approaches are the same. The only difference being that the `deploy` script will download a pre-built image from docker hub,  
-where as the `deploy-local` script will build the image on your system.
+After installing docker, simply download and run the `run` script in this repo
 
 ## Local Data
 
@@ -51,3 +48,4 @@ The docker container also hosts it's own web based UI for node monitoring and wa
 Explorer: `http://localhost:17500/explorer`  
 Wallet: `http://localhost:17500/wallet`  
 Miner: `http://localhost:17500/miner` 
+API: `http://localhost:17500/api`
