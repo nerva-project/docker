@@ -2,4 +2,4 @@
 
 echo Starting nerva-wallet-cli
 
-nerva-wallet-cli-bin --log-file /nerva/nerva-wallet-cli.log "${@}"
+nerva-wallet-cli-bin --log-file /nerva/nerva-wallet-cli.log

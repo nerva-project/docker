@@ -12,5 +12,5 @@ echo Starting ${prog}
 
 screen -dmS nervad ${prog} --p2p-bind-ip 0.0.0.0 --p2p-bind-port 17565 --rpc-bind-ip 0.0.0.0 --rpc-bind-port 17566 --confirm-external-bind \
 --rpc-access-control-origins http://localhost,http://localhost:17566,http://localhost:17500,http://127.0.0.1,http://127.0.0.1:17566,http://127.0.0.1:17500 \
---rpc-ssl disabled --quicksync /nerva/quicksync.raw --data-dir /nerva/blockchain --log-file /nerva/nervad.log --log-level 1 "${@}"
+--rpc-ssl disabled --quicksync /nerva/quicksync.raw --data-dir /nerva/blockchain --log-file /nerva/nervad.log --log-level 1
 
